@@ -2504,7 +2504,7 @@ async function generateInstructions() {
         for (var i = 0; i < totalPlates; i++) {
             await sleep(50);
             if ((i + 1) % (isHighQuality ? 20 : 50) === 0) {
-                addWaterMark(pdf, isHighQuality);
+                // addWaterMark(pdf, isHighQuality);
                 pdf.save(`Lego-Art-Remix-Instructions-Part-${numParts}.pdf`);
                 numParts++;
                 pdf = new jsPDF({
@@ -2571,7 +2571,7 @@ async function generateInstructions() {
             );
         }
 
-        addWaterMark(pdf, isHighQuality);
+        // addWaterMark(pdf, isHighQuality);
         pdf.save(
             numParts > 1 ?
             `Lego-Art-Remix-Instructions-Part-${numParts}.pdf` :
